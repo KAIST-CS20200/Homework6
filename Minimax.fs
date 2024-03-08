@@ -4,4 +4,4 @@ namespace CS220
 type MinimaxStrategy () =
   inherit AI ()
   override __.NextMove player board =
-    failwith "Implement"
+    failwith "Implement" // REMOVE this line when you implement your own code
