@@ -81,7 +81,7 @@ type TestClass () =
     let board = [| Marked O; Marked X; Marked O
                    Marked X; Marked O; Marked X
                    Marked X; Marked X; EmptySlot |] |> toBoard
-    Assert.AreEqual (9, strategy.NextMove O board)
+    Assert.AreEqual<int> (9, strategy.NextMove O board)
 
   [<TestMethod; Timeout 1000; TestCategory "3">]
   member __.``Problem 3.B``() =
@@ -89,7 +89,7 @@ type TestClass () =
     let board = [| Marked O;  Marked X; Marked O
                    Marked X;  Marked O; Marked X
                    EmptySlot; EmptySlot; Marked X |] |> toBoard
-    Assert.AreEqual (7, strategy.NextMove O board)
+    Assert.AreEqual<int> (7, strategy.NextMove O board)
 
   [<TestMethod; Timeout 1000; TestCategory "3">]
   member __.``Problem 3.C``() =
@@ -97,7 +97,7 @@ type TestClass () =
     let board = [| Marked O;  Marked X; Marked O
                    Marked X;  Marked X; Marked O
                    EmptySlot; EmptySlot; EmptySlot |] |> toBoard
-    Assert.AreEqual (8, strategy.NextMove X board)
+    Assert.AreEqual<int> (8, strategy.NextMove X board)
 
   [<TestMethod; Timeout 1000; TestCategory "3">]
   member __.``Problem 3.D``() =
@@ -105,5 +105,5 @@ type TestClass () =
     let board = [| EmptySlot;  Marked O ; EmptySlot
                    EmptySlot;  EmptySlot; Marked X
                    EmptySlot;  EmptySlot; Marked X |] |> toBoard
-    Assert.AreEqual (3, strategy.NextMove O board)
+    Assert.AreEqual<int> (3, strategy.NextMove O board)
 
